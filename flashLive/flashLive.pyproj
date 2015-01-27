@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>flashLive</Name>
+    <RootNamespace>flashLive</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{c59b3b36-a167-4dbf-8775-200edabb6e5c}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>flashLive.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="delay\models.py" />
+    <Compile Include="delay\tests.py" />
+    <Compile Include="delay\views.py" />
+    <Compile Include="delay\__init__.py" />
+    <Compile Include="liveBackend\admin.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="liveBackend\models.py" />
+    <Compile Include="liveBackend\tests.py" />
+    <Compile Include="liveBackend\views.py" />
+    <Compile Include="liveBackend\__init__.py" />
+    <Compile Include="live\models.py" />
+    <Compile Include="live\tests.py" />
+    <Compile Include="live\views.py" />
+    <Compile Include="live\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="flashLive\__init__.py" />
+    <Compile Include="flashLive\settings.py" />
+    <Compile Include="flashLive\urls.py" />
+    <Compile Include="flashLive\wsgi.py" />
+    <Compile Include="rate\models.py" />
+    <Compile Include="rate\tests.py" />
+    <Compile Include="rate\views.py" />
+    <Compile Include="rate\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="delay\templates\index.html" />
+    <Content Include="liveBackend\templates\index.html" />
+    <Content Include="live\templates\display.html" />
+    <Content Include="live\templates\index.html" />
+    <Content Include="live\templates\live_flow.html" />
+    <Content Include="live\templates\live_loc_selector.html" />
+    <Content Include="live\templates\live_selector.html" />
+    <Content Include="live\templates\nav.html" />
+    <Content Include="live\templates\nav_new.html" />
+    <Content Include="live\templates\panel.html" />
+    <Content Include="rate\templates\index.html" />
+    <Content Include="rate\templates\live_connect_ratio.html" />
+    <Content Include="rate\templates\live_connect_selector.html" />
+    <Content Include="rate\templates\live_rates.html" />
+    <Content Include="rate\templates\live_rate_selector.html" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="delay\" />
+    <Folder Include="delay\templates\" />
+    <Folder Include="flashLive\" />
+    <Folder Include="liveBackend\" />
+    <Folder Include="liveBackend\templates\" />
+    <Folder Include="live\" />
+    <Folder Include="live\templates\" />
+    <Folder Include="rate\" />
+    <Folder Include="rate\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

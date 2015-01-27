@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block otherscripts %}
+{% endblock %}
+
+{% block js %}
+{% for data in datalist %}
+$(function () {
+	$('#container_{{ data.idx }}').highcharts({
+		title: {
+			text: '{{ data.title|safe }}',
+			x: -20 //cencter
+		},
+		subtitle: {
+			text: '-- for VoD',
+			x: -20
+		},
+		xAxis: {
+			categories: {{ data.xaxis|safe }},
+			tickInterval: {{ data.tickinterval|safe }},
+			labels: {
+				rotation: 45
+			}
+		},
+		yAxis: {
+			title: {
+				text: 'ratio of playtm'
+			},
+			plotLines: [{
+				value: 0,
+				width: 1,
+				color: '#808080'
+			}]
+		},
+		tooltip: {
+			valueSuffix: '%'
+		},
+		legend: {
+			layout: 'vertical',
+			align: 'right',
+			verticalAlign: 'middle',
+			borderWidth: 0
+		},
+		series:[{{ data.data|safe }}]
+	});
+});
+{% endfor %}
+{% endblock %}
+
+{% block title %}Just for Test{% endblock %}
+
+{% block content %}
+
+<p>Date: {{ current_date }}.</p>
+
+<hr>
+
+<div>
+    <form action="/query/vod/playtm/date" method="get">
+        <label for="from">from</label>
+        <input type="text" id="from" name="from" value={{ fromdate }}>
+
+        <label for="to">to</label>
+        <input type="text" id="to" name="to" value={{ todate  }}>
+
+        <label>version</label>
+        <select name="ver">
+        {% for ver in verlist %}
+            {% ifequal ver.Version selectedver %}
+                <option selected>{{ ver.Description }}</option>
+            {% else %}
+                <option>{{ ver.Description }}</option>
+            {% endifequal %}
+        {% endfor %}
+        </select>
+
+        <label>ISP</label>
+        <select name="isp">
+        {% for isp in isplist %}
+            {% ifequal isp.ISP selectedisp %}
+                <option selected>{{ isp.Description }}</option>
+            {% else %}
+                <option>{{ isp.Description }}</option>
+            {% endifequal %}
+        {% endfor %}
+        </select>
+
+        <label>VideoType</label>
+        <select name="vtype">
+        {% for vt in vtlist %}
+            {% ifequal vt.VideoType selectedvt %}
+                <option selected>{{ vt.Description }}</option>
+            {% else %}
+                <option>{{ vt.Description }}</option>
+            {% endifequal %}
+        {% endfor %}
+        </select>
+
+        <input type="submit" value="Get" />
+    </form>
+</div>
+
+<hr>
+
+{% for data in datalist %}
+<div id="container_{{data.idx}}" style="min-width:700px;height:400px"></div>
+{% endfor %}
+<hr>
+
+<script type="text/javascript">
+$(function(){
+        $("#from").datepicker({
+		defaultDate: $("#from").val(),
+		dateFormat: 'yy-mm-dd',
+		changeMonth: true,
+		numberofMonths: 3,
+		onClose: function( selectedDate ) {
+			$("#to").datepicker( "option", "minDate", selectedDate );
+		}
+	});
+        $("#to").datepicker({
+		defaultDate: $("#to").val(),
+		dateFormat: 'yy-mm-dd',
+		changeMonth: true,
+                numberofMonths: 3,
+                onClose: function( selectedDate ) {
+                        $("#from").datepicker( "option", "maxDate", selectedDate );
+                }
+	});
+});
+
+</script>
+
+<link href="/static/jquery-ui-1.11.2/jquery-ui.min.css" rel="stylesheet" type="text/css"/> 
+<script type="text/javascript" src="/static/jquery-ui-1.11.2/jquery-ui.min.js"></script> 
+
+{% endblock %}

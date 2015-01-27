@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+    <link rel="stylesheet" href="/static/content/bootstrap.min.css">    
+    <link rel="stylesheet" href="/static/jquery-ui-1.11.2/jquery-ui.css">    
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/jquery-ui-1.11.2/jquery-ui.js"></script>
+    <script src="/static/Highcharts-4.0.4/js/highcharts.js"></script>
+    <script src="/static/Highcharts-4.0.4/js/modules/exporting.js"></script>
+
+    <script>
+        $(function () {
+            {% block formHeadBlock %} {% endblock %}                 
+            {% block highchartsblock %} {% endblock %}
+            $( "#tabs" ).tabs();
+        });  
+    </script>
+
+    {% block styleBlock %} {% endblock %}    
+      
+</head>
+<body>
+    <div>
+        {% block formblock %} {% endblock %}        
+        <hr />
+    </div>    
+
+    <div id="tabs">
+    
+        {% block tabsblock %} {% endblock %}
+    </div>
+</body>
+</html>

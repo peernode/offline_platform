@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <!--link type="text/css" href="/static/datepicker/css/datepicker.css" rel="stylesheet"></link-->
+
+    <script type="text/javascript" src="/static/scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/static/Highcharts-4.0.4/js/highcharts.js"></script> 
+    <script type="text/javascript" src="/static/Highcharts-4.0.4/js/modules/exporting.js"></script>
+    
+    {% block otherscripts %}{% endblock %}
+	
+    <script>{% block js %}{% endblock %}</script>
+    
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <h1>JUST for test</h1>
+    {% block content %}{% endblock %}
+    {% block footer %}
+    <hr>
+    <p>Copyright © 2014 - 2015, FlashP2P, Fun.tv</p>
+    {% endblock %}
+    
+</body>
+</html>

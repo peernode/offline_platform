@@ -1,0 +1,22 @@
+﻿
+        <!-- $("#from").attr("value", "{{begin_date}}"); -->
+        $("#from").datepicker({
+            defaultDate: $("#from").val(),
+            dateFormat: "yy-mm-dd",
+            changeMonth: true,
+            onClose: function (selectedDate) {
+                $("#to").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        <!--$("#to").attr("value", {{end_date|date:"Y-m-d"}});-->
+        $("#to").datepicker({
+            maxDate: -1,
+            defaultDate: $("#to").val(),
+            dateFormat: "yy-mm-dd",
+            changeMonth: true,
+            onClose: function (selectedDate) {
+                $("#from").datepicker("option", "maxDate", selectedDate);
+            }
+        });
+        $("#from").datepicker("option", "maxDate", $("#to").val());
+        $("#to").datepicker("option", "minDate", $("#from").val());

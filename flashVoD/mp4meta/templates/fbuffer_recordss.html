@@ -1,0 +1,86 @@
+﻿{% extends "daily_base.html" %}
+
+{% block formHeadBlock %}
+{% include 'from_to.html' %}     
+{% endblock %}
+
+{% block highchartsblock %}
+    $("#tabs-1").highcharts({
+            title: {
+	            text: '{{item.title}}',
+	            x: -20 //center
+	        },
+	        subtitle: {
+	            text: '{{item.subtitle}}',
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: [{{item.xAxis|safe}}],
+                tickInterval:{{item.t_interval}},
+                labels:{
+                    rotation:45
+                }
+	        },
+	        yAxis: {
+	            title: {
+	                text: 'fbuffer records '
+	            },
+	            plotLines: [{
+	                value: 0,
+	                width: 1,
+	                color: '#808080'
+	            }],
+                min: 0
+	        },
+	        tooltip: {
+	            valueSuffix: '',
+                shared: true  
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: [{{item.series|safe}}]
+    });
+{% endblock %}
+
+{% block formblock %} 
+    <form action="/mp4meta/fbuffer_records" method="get">
+        {% include 'from_to2.html' %}  
+        <input type="submit" value="Get" />
+    </form>
+{% endblock %}
+
+{% block tabsblock %}
+<ul>
+    <li><a href="#tabs-1">图形</a></li>
+    <li><a href="#tabs-2">表格</a></li>        
+</ul>
+<div id="tabs-1" style="min-width:700px;height:400px" >
+</div>
+
+<div id="tabs-2">
+<table class="table table-bordered table-condensed" >
+<tr>
+    {% for item in headers %}
+        <th>{{item}}</th>
+    {% endfor %}
+</tr>
+
+{% for item in contents %}
+<tr>
+    <td>{{item.date|date:"Y-m-d"}}</td>
+    <td>{{item.all}}</td>
+    <td>{{item.movie}}</td>
+    <td>{{item.tv}}</td>
+    <td>{{item.cartoon}}</td>
+    <td>{{item.variety}}</td>
+    <td>{{item.micro}}</td>
+    <td>{{item.other}}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

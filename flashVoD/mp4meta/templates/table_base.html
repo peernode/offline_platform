@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    {% include 'from_to.html' %}  
+</head>
+<body>
+    <div>
+        {% block triger %}  {% endblock %}
+    </div>
+    <div>
+        <table border="1">
+            {% block tablehead %} {% endblock %}
+            {% block tablerow %} {% endblock %}
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿{% extends "table_base.html" %}
+
+{% block triger %}
+<form action="/mp4meta/fbuffer_records" method="get">
+    {% include 'from_to2.html' %}  
+    <input type="submit" value="Get" />
+</form>
+<hr />
+{% endblock %}
+
+{% block tablehead %}
+<tr>
+    {% for item in headers %}
+        <th>{{item}}</th>
+    {% endfor %}
+</tr>
+{% endblock %}
+
+{% block tablerow %}
+{% for item in contents %}
+<tr>
+    <td>{{item.date|date:"Y-m-d"}}</td>
+    <td>{{item.all}}</td>
+    <td>{{item.movie}}</td>
+    <td>{{item.tv}}</td>
+    <td>{{item.cartoon}}</td>
+    <td>{{item.variety}}</td>
+    <td>{{item.micro}}</td>
+    <td>{{item.other}}</td>
+</tr>
+{% endfor %}
+{% endblock %}

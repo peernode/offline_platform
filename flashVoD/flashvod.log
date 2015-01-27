@@ -1,0 +1,207 @@
+DEBUG 2015-01-04 10:11:14,585 views 9036 6008 home request!!!
+WARNING 2015-01-04 10:11:18,788 base 9036 9488 Not Found: /favicon.ico
+DEBUG 2015-01-04 10:11:19,029 views 9036 7248 home request!!!
+DEBUG 2015-01-04 10:12:54,642 views 9096 10024 home request!!!
+WARNING 2015-01-04 10:12:59,151 base 9096 9808 Not Found: /favicon.ico
+DEBUG 2015-01-04 10:12:59,391 views 9096 5984 home request!!!
+DEBUG 2015-01-04 10:17:23,365 views 1892 2664 home request!!!
+WARNING 2015-01-04 10:17:23,377 base 1892 4384 Not Found: /favicon.ico
+DEBUG 2015-01-04 10:17:23,500 views 1892 4228 home request!!!
+DEBUG 2015-01-04 10:25:57,072 views 10816 10364 home request!!!
+WARNING 2015-01-04 10:25:57,230 base 10816 4124 Not Found: /favicon.ico
+DEBUG 2015-01-04 10:25:57,744 views 10816 7752 home request!!!
+DEBUG 2015-01-04 10:36:04,658 views 11024 10744 home request!!!
+WARNING 2015-01-04 10:36:04,693 base 11024 5952 Not Found: /favicon.ico
+DEBUG 2015-01-04 10:36:04,892 views 11024 10704 home request!!!
+DEBUG 2015-01-04 10:37:56,346 views 7052 10984 home request!!!
+WARNING 2015-01-04 10:37:56,369 base 7052 5004 Not Found: /favicon.ico
+DEBUG 2015-01-04 10:37:56,529 views 7052 10388 home request!!!
+DEBUG 2015-01-04 10:39:00,246 views 6788 11112 home request!!!
+WARNING 2015-01-04 10:39:00,273 base 6788 9268 Not Found: /favicon.ico
+DEBUG 2015-01-04 10:39:00,380 views 6788 10988 home request!!!
+WARNING 2015-01-05 14:37:23,512 base 12984 13920 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:37:23,615 views 12984 16204 home request!!!
+DEBUG 2015-01-05 14:37:24,069 views 12984 18956 home request!!!
+DEBUG 2015-01-05 14:37:42,671 views 12984 15752 home request!!!
+WARNING 2015-01-05 14:38:14,578 base 20200 18128 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:38:14,641 views 20200 18420 home request!!!
+DEBUG 2015-01-05 14:38:14,818 views 20200 16396 home request!!!
+WARNING 2015-01-05 14:38:54,605 base 19004 15616 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:38:54,615 views 19004 13952 home request!!!
+DEBUG 2015-01-05 14:38:54,773 views 19004 15008 home request!!!
+WARNING 2015-01-05 14:39:56,792 base 17504 10208 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:39:56,806 views 17504 19248 home request!!!
+DEBUG 2015-01-05 14:39:56,994 views 17504 18884 home request!!!
+WARNING 2015-01-05 14:40:31,325 base 18548 17612 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:40:31,415 views 18548 18168 home request!!!
+DEBUG 2015-01-05 14:40:31,604 views 18548 12992 home request!!!
+WARNING 2015-01-05 14:40:31,719 base 18548 14932 Not Found: /nav.html
+WARNING 2015-01-05 14:40:31,868 base 18548 19424 Not Found: /panel.html
+DEBUG 2015-01-05 14:41:22,698 views 17392 17848 home request!!!
+WARNING 2015-01-05 14:41:22,878 base 17392 20288 Not Found: /nav.html
+WARNING 2015-01-05 14:41:22,880 base 17392 19156 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:41:23,089 views 17392 14056 home request!!!
+WARNING 2015-01-05 14:41:23,098 base 17392 16776 Not Found: /panel.html
+WARNING 2015-01-05 14:42:51,947 base 16564 15964 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:42:51,996 views 16564 16424 home request!!!
+DEBUG 2015-01-05 14:42:52,117 views 16564 17628 home request!!!
+DEBUG 2015-01-05 14:42:52,278 views 16564 13496 home request!!!
+DEBUG 2015-01-05 14:42:52,578 views 16564 14996 home request!!!
+DEBUG 2015-01-05 14:42:52,582 views 16564 16024 home request!!!
+DEBUG 2015-01-05 14:42:52,627 views 16564 17420 home request!!!
+DEBUG 2015-01-05 14:42:52,904 views 16564 13884 home request!!!
+DEBUG 2015-01-05 14:42:52,934 views 16564 20132 home request!!!
+DEBUG 2015-01-05 14:42:52,973 views 16564 16596 home request!!!
+DEBUG 2015-01-05 14:42:53,223 views 16564 19436 home request!!!
+DEBUG 2015-01-05 14:42:53,256 views 16564 18540 home request!!!
+DEBUG 2015-01-05 14:42:53,286 views 16564 14280 home request!!!
+DEBUG 2015-01-05 14:42:53,543 views 16564 13296 home request!!!
+DEBUG 2015-01-05 14:42:53,615 views 16564 14276 home request!!!
+DEBUG 2015-01-05 14:42:53,615 views 16564 19400 home request!!!
+DEBUG 2015-01-05 14:42:53,877 views 16564 16600 home request!!!
+DEBUG 2015-01-05 14:42:53,943 views 16564 19612 home request!!!
+DEBUG 2015-01-05 14:42:53,943 views 16564 19688 home request!!!
+DEBUG 2015-01-05 14:42:54,207 views 16564 8332 home request!!!
+DEBUG 2015-01-05 14:42:54,270 views 16564 14180 home request!!!
+WARNING 2015-01-05 14:43:13,960 base 1296 11468 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:43:14,045 views 1296 20020 home request!!!
+DEBUG 2015-01-05 14:43:14,125 views 1296 15008 home request!!!
+DEBUG 2015-01-05 14:43:14,418 views 1296 18376 home request!!!
+DEBUG 2015-01-05 14:43:14,421 views 1296 19888 home request!!!
+DEBUG 2015-01-05 14:43:14,835 views 1296 17152 home request!!!
+DEBUG 2015-01-05 14:43:14,842 views 1296 14360 home request!!!
+DEBUG 2015-01-05 14:43:15,154 views 1296 18000 home request!!!
+DEBUG 2015-01-05 14:43:15,164 views 1296 20040 home request!!!
+DEBUG 2015-01-05 14:43:15,473 views 1296 16928 home request!!!
+DEBUG 2015-01-05 14:43:15,487 views 1296 19356 home request!!!
+DEBUG 2015-01-05 14:43:15,792 views 1296 18692 home request!!!
+DEBUG 2015-01-05 14:43:15,816 views 1296 16640 home request!!!
+DEBUG 2015-01-05 14:43:16,111 views 1296 8196 home request!!!
+DEBUG 2015-01-05 14:43:16,157 views 1296 12860 home request!!!
+DEBUG 2015-01-05 14:43:16,463 views 1296 18352 home request!!!
+DEBUG 2015-01-05 14:43:16,487 views 1296 18832 home request!!!
+DEBUG 2015-01-05 14:43:16,834 views 1296 14240 home request!!!
+DEBUG 2015-01-05 14:43:16,835 views 1296 12240 home request!!!
+DEBUG 2015-01-05 14:43:17,190 views 1296 17856 home request!!!
+DEBUG 2015-01-05 14:43:17,190 views 1296 10140 home request!!!
+DEBUG 2015-01-05 14:44:13,709 views 4256 19492 home request!!!
+WARNING 2015-01-05 14:44:13,753 base 4256 12664 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:44:14,084 views 4256 4004 home request!!!
+DEBUG 2015-01-05 14:44:15,867 views 4256 19984 home request!!!
+DEBUG 2015-01-05 14:44:15,979 views 4256 19192 home request!!!
+DEBUG 2015-01-05 14:44:19,145 views 4256 17232 home request!!!
+DEBUG 2015-01-05 14:44:19,155 views 4256 15300 home request!!!
+DEBUG 2015-01-05 14:44:21,013 views 4256 9864 home request!!!
+DEBUG 2015-01-05 14:44:21,319 views 4256 16204 home request!!!
+DEBUG 2015-01-05 14:44:22,769 views 4256 15240 home request!!!
+DEBUG 2015-01-05 14:44:22,769 views 4256 18620 home request!!!
+DEBUG 2015-01-05 14:44:25,336 views 4256 10300 home request!!!
+DEBUG 2015-01-05 14:44:25,345 views 4256 18524 home request!!!
+DEBUG 2015-01-05 14:44:25,727 views 4256 15500 home request!!!
+DEBUG 2015-01-05 14:44:25,737 views 4256 5768 home request!!!
+DEBUG 2015-01-05 14:44:26,134 views 4256 18272 home request!!!
+DEBUG 2015-01-05 14:44:26,144 views 4256 18884 home request!!!
+DEBUG 2015-01-05 14:44:26,512 views 4256 18492 home request!!!
+DEBUG 2015-01-05 14:44:26,533 views 4256 5584 home request!!!
+DEBUG 2015-01-05 14:44:26,868 views 4256 13104 home request!!!
+DEBUG 2015-01-05 14:44:26,923 views 4256 19256 home request!!!
+WARNING 2015-01-05 14:44:55,309 base 18404 13212 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:44:55,391 views 18404 3976 home request!!!
+DEBUG 2015-01-05 14:44:55,460 views 18404 13720 home request!!!
+DEBUG 2015-01-05 14:44:55,802 views 18404 20132 home request!!!
+DEBUG 2015-01-05 14:44:55,826 views 18404 19436 home request!!!
+DEBUG 2015-01-05 14:44:56,186 views 18404 19612 home request!!!
+DEBUG 2015-01-05 14:44:56,187 views 18404 19688 home request!!!
+DEBUG 2015-01-05 14:44:56,517 views 18404 18292 home request!!!
+DEBUG 2015-01-05 14:44:56,517 views 18404 7668 home request!!!
+DEBUG 2015-01-05 14:44:56,782 views 18404 18556 home request!!!
+DEBUG 2015-01-05 14:44:56,836 views 18404 20464 home request!!!
+DEBUG 2015-01-05 14:44:56,839 views 18404 19308 home request!!!
+DEBUG 2015-01-05 14:44:57,101 views 18404 19948 home request!!!
+DEBUG 2015-01-05 14:44:57,155 views 18404 19040 home request!!!
+DEBUG 2015-01-05 14:44:57,157 views 18404 8332 home request!!!
+DEBUG 2015-01-05 14:44:57,426 views 18404 14180 home request!!!
+DEBUG 2015-01-05 14:44:57,484 views 18404 19396 home request!!!
+DEBUG 2015-01-05 14:44:57,484 views 18404 20200 home request!!!
+DEBUG 2015-01-05 14:44:57,743 views 18404 20140 home request!!!
+DEBUG 2015-01-05 14:44:57,812 views 18404 12576 home request!!!
+DEBUG 2015-01-05 14:44:57,815 views 18404 17800 home request!!!
+WARNING 2015-01-05 14:45:15,026 base 15216 19932 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:45:15,069 views 15216 15424 home request!!!
+DEBUG 2015-01-05 14:45:15,142 views 15216 18504 home request!!!
+DEBUG 2015-01-05 14:45:15,441 views 15216 18136 home request!!!
+DEBUG 2015-01-05 14:45:15,444 views 15216 15432 home request!!!
+DEBUG 2015-01-05 14:45:15,489 views 15216 11036 home request!!!
+DEBUG 2015-01-05 14:45:15,543 views 15216 20016 home request!!!
+DEBUG 2015-01-05 14:45:15,779 views 15216 17276 home request!!!
+DEBUG 2015-01-05 14:45:15,813 views 15216 20036 home request!!!
+DEBUG 2015-01-05 14:45:15,864 views 15216 18992 home request!!!
+DEBUG 2015-01-05 14:45:16,094 views 15216 15552 home request!!!
+DEBUG 2015-01-05 14:45:16,130 views 15216 20156 home request!!!
+DEBUG 2015-01-05 14:45:16,191 views 15216 19868 home request!!!
+DEBUG 2015-01-05 14:45:16,414 views 15216 19512 home request!!!
+DEBUG 2015-01-05 14:45:16,460 views 15216 19376 home request!!!
+DEBUG 2015-01-05 14:45:16,507 views 15216 18240 home request!!!
+DEBUG 2015-01-05 14:45:16,733 views 15216 8560 home request!!!
+DEBUG 2015-01-05 14:45:16,785 views 15216 19940 home request!!!
+DEBUG 2015-01-05 14:45:16,822 views 15216 15188 home request!!!
+DEBUG 2015-01-05 14:45:17,101 views 15216 14272 home request!!!
+DEBUG 2015-01-05 14:45:17,154 views 15216 1296 home request!!!
+WARNING 2015-01-05 14:46:07,805 base 19768 19984 Not Found: /favicon.ico
+DEBUG 2015-01-05 14:46:07,869 views 19768 20032 home request!!!
+DEBUG 2015-01-05 14:46:08,007 views 19768 17956 home request!!!
+WARNING 2015-01-06 16:44:23,357 base 5948 16612 Not Found: /favicon.ico
+DEBUG 2015-01-06 16:44:23,530 views 5948 11296 home request!!!
+DEBUG 2015-01-06 16:44:23,723 views 5948 15856 home request!!!
+WARNING 2015-01-06 16:45:09,230 base 19404 12940 Not Found: /favicon.ico
+DEBUG 2015-01-06 16:45:09,296 views 19404 19376 home request!!!
+DEBUG 2015-01-06 16:45:09,701 views 19404 16476 home request!!!
+WARNING 2015-01-06 16:45:50,007 base 15740 17024 Not Found: /favicon.ico
+DEBUG 2015-01-06 16:45:50,088 views 15740 17368 home request!!!
+DEBUG 2015-01-06 16:45:50,253 views 15740 18752 home request!!!
+WARNING 2015-01-06 17:43:34,875 base 11612 3060 Not Found: /favicon.ico
+DEBUG 2015-01-06 17:43:34,967 views 11612 11208 home request!!!
+DEBUG 2015-01-06 17:43:35,071 views 11612 12740 home request!!!
+DEBUG 2015-01-21 10:13:06,178 views 10152 11336 home request!!!
+WARNING 2015-01-21 10:13:09,381 base 10152 11580 Not Found: /favicon.ico
+DEBUG 2015-01-21 10:13:09,634 views 10152 11584 home request!!!
+WARNING 2015-01-22 11:49:57,884 base 16240 6464 Not Found: /favicon.ico
+DEBUG 2015-01-22 11:49:57,967 views 16240 6868 home request!!!
+DEBUG 2015-01-22 11:49:58,030 views 16240 15352 home request!!!
+DEBUG 2015-01-22 11:50:22,782 views 14928 12076 home request!!!
+WARNING 2015-01-22 11:50:22,812 base 14928 14908 Not Found: /favicon.ico
+DEBUG 2015-01-22 11:50:22,937 views 14928 15872 home request!!!
+WARNING 2015-01-22 11:51:35,921 base 14860 16084 Not Found: /favicon.ico
+DEBUG 2015-01-22 11:51:35,964 views 14860 16192 home request!!!
+DEBUG 2015-01-22 11:51:36,171 views 14860 11948 home request!!!
+DEBUG 2015-01-22 11:51:56,017 views 12836 16268 home request!!!
+WARNING 2015-01-22 11:51:56,131 base 12836 5404 Not Found: /favicon.ico
+DEBUG 2015-01-22 11:51:56,377 views 12836 15496 home request!!!
+WARNING 2015-01-22 11:52:21,505 base 10332 14396 Not Found: /favicon.ico
+DEBUG 2015-01-22 11:52:21,572 views 10332 13932 home request!!!
+DEBUG 2015-01-22 11:52:21,944 views 10332 14260 home request!!!
+DEBUG 2015-01-22 11:52:33,990 views 15420 16080 home request!!!
+WARNING 2015-01-22 11:52:34,000 base 15420 10676 Not Found: /favicon.ico
+DEBUG 2015-01-22 11:52:34,345 views 15420 10836 home request!!!
+DEBUG 2015-01-22 11:52:44,232 views 15420 14892 home request!!!
+WARNING 2015-01-22 11:55:34,464 base 11464 10304 Not Found: /favicon.ico
+DEBUG 2015-01-22 11:55:34,552 views 11464 11736 home request!!!
+DEBUG 2015-01-22 11:55:34,665 views 11464 15216 home request!!!
+DEBUG 2015-01-22 12:09:31,890 views 14516 12472 home request!!!
+WARNING 2015-01-22 12:09:31,957 base 14516 13020 Not Found: /favicon.ico
+DEBUG 2015-01-22 12:09:32,345 views 14516 6384 home request!!!
+DEBUG 2015-01-22 12:11:07,065 views 13932 8876 home request!!!
+WARNING 2015-01-22 12:11:07,168 base 13932 6436 Not Found: /favicon.ico
+DEBUG 2015-01-22 12:11:07,644 views 13932 12448 home request!!!
+WARNING 2015-01-22 12:12:02,838 base 1304 8876 Not Found: /favicon.ico
+DEBUG 2015-01-22 12:12:03,619 views 1304 15480 home request!!!
+DEBUG 2015-01-22 12:12:03,709 views 1304 4520 home request!!!
+DEBUG 2015-01-22 12:13:07,914 views 12748 12604 home request!!!
+WARNING 2015-01-22 12:13:08,012 base 12748 16272 Not Found: /favicon.ico
+DEBUG 2015-01-22 12:13:08,342 views 12748 15616 home request!!!
+DEBUG 2015-01-22 12:13:47,966 views 15220 15712 home request!!!
+WARNING 2015-01-22 12:13:48,538 base 15220 13020 Not Found: /favicon.ico
+DEBUG 2015-01-22 12:13:48,746 views 15220 12536 home request!!!
+WARNING 2015-01-22 12:15:49,553 base 15880 16404 Not Found: /favicon.ico
+DEBUG 2015-01-22 12:15:49,838 views 15880 16456 home request!!!
+DEBUG 2015-01-22 12:15:49,849 views 15880 16428 home request!!!

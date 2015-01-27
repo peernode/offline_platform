@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Copatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直播流量监控</title>
+    <link rel="stylesheet" href="/static/jquery-ui-1.11.2/jquery-ui.min.css">
+
+    <script src="/static/jquery-1.11.1/jquery-1.11.1.min.js"></script>
+    <script src="/static/jquery-ui-1.11.2/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/static/Highcharts-4.0.4/js/highcharts.js"></script>
+    <script src="/static/Highcharts-4.0.4/js/modules/exporting.js" type="text/javascript"></script>
+    <script>
+      $(function () {
+        $( "#fromdate" ).datepicker({
+          defaultDate: $("#fromdate").val(),
+          dateFormat: "yy-mm-dd",
+          onClose: function( selectedDate ) {
+            $( "#todate" ).datepicker( "option", "minDate", selectedDate );
+          }
+        });
+
+        $( "#todate" ).datepicker({
+          defaultDate: $("#todate").val(),
+          dateFormat: "yy-mm-dd",
+          maxDate: -1,
+          onClose: function( selectedDate ) {
+            $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+          }
+        });
+        $( "#fromdate" ).datepicker("option", "maxDate", $("#todate").val());
+        $( "#todate" ).datepicker("option", "minDate", $("#fromdate").val());
+        $('#form1').submit(function() {
+          var ajaxURL="./live_flow";
+          $.ajax({
+            type: "POST",
+            dataType: "html",
+            url: ajaxURL,
+            data:$('#form1').serialize(),
+            success: function(data){
+                alert("Data Saved: " + data);
+            },
+            error: function(data){
+              alert("error:"+data);
+            }
+          });
+        });
+    });
+    </script>
+    <style>
+      select {
+        width: 150px;
+      }
+      .overflow {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="selector"> 
+	  <form id="form1">
+        <fieldset>
+          <legend>查询条件</legend>
+          <label>选择日期：From</label>
+          <input type="text" value={{fdate}} id="fromdate" name="from">
+		  <label>To</label>
+          <input type="text" value={{tdate}} id="todate" name="to">
+		  <label for="version">版本</label>
+		  <select name="version" id="version">
+    	  {% for item in ver %}
+    	    {% ifequal item qver %}
+        	  <option value="{{item}}" selected="selected">{{item}}</option>
+    		{% else %}
+    		  <option value="{{item}}">{{item}}</option>
+    		{% endifequal %}
+    	  {% endfor %}
+    	  </select>
+
+    	  <label for="infohash">频道</label>
+		  <select name="infohash" id="infohash">
+    	  {% for item in infohash %}
+    		{% ifequal item qinfohash %}
+        	  <option value="{{item}}" selected="selected">{{item}}</option>
+    		{% else %}
+    		  <option value="{{item}}">{{item}}</option>
+    		{% endifequal %}
+    	  {% endfor %}
+    	  </select>
+
+    	  <label for="isp">运营商</label>
+		  <select name="isp" id="isp">
+    	  {% for item in isp %}
+        	{% ifequal item qisp %}
+        		<option value="{{item}}" selected="selected">{{item}}</option>
+    		{% else %}
+    			<option value="{{item}}">{{item}}</option>
+    		{% endifequal %}
+    	  {% endfor %}
+    	  </select>
+    	  <input type="submit" value="Get" />
+          <br />
+          <br />
+        </fieldset>
+      </form> 
+    </div>
+    <hr />
+  </body>
+  {% include 'live_flow.html' %}
+</html>

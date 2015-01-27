@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Copatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直播传输速率</title>
+
+    <script src="../../static/jquery-1.11.1/jquery-1.11.1.min.js"></script>
+    <script src="../../static/Highcharts-4.0.4/js/highcharts.js"></script>
+    <script src="../../static/Highcharts-4.0.4/js/modules/exporting.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+    $(function () {
+    {% for item in content %}
+      $('#container_{{item.index}}').highcharts({
+        chart: {
+          zoomType: 'xy'
+        },
+        title: {
+          text: '直播 {{item.title}}'
+        },
+        subtitle: {
+          text: 'From {{fdate}} To {{tdate}}'
+        },
+        xAxis: [{
+          categories: {{item.time|safe}} 
+        }],
+        yAxis: [{
+          labels: {
+            style: {
+              color: '#89A54E'
+            }
+          },
+          title: {
+            text: 'Records'
+          }
+        }, {
+          title: {
+            text: 'Rate(KB/s)'
+          },
+          labels: {
+            style: {
+              color: '#4572A7'
+            }
+          },
+          opposite: true
+        }],
+        tooltip: {
+          shared: true  
+        },
+        plotOptions: {
+        },
+        legend: {
+          layout: 'vertical',
+          align: 'left',
+          x: 120,
+          verticalAlign: 'top',
+          y: 100,
+          floating: true
+        },
+        series: [{
+          name: '记录数',
+          type: 'column',
+          data: {{item.records|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }, {
+          name: 'P25',
+          type: 'spline',
+          yAxis: 1,
+          data: {{item.p25|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }, {
+          name: 'P50',
+          type: 'spline',
+          yAxis: 1,
+          data: {{item.p50|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }, {
+          name: 'P75',
+          type: 'spline',
+          yAxis: 1,
+          data: {{item.p75|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }, {
+          name: 'P90',
+          type: 'spline',
+          yAxis: 1,
+          data: {{item.p90|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }, {
+          name: 'P95',
+          type: 'spline',
+          yAxis: 1,
+          data: {{item.p95|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }]
+      });
+    {% endfor %}
+    });    
+    </script>
+  </head>
+  <body>
+    {% if content %}
+      {% for item in content %}
+        <div id="container_{{item.index}}" style="max-width:1000px;height:600px"></div>
+      {% endfor %}}
+    {% else %}
+      <p>{{error}}</p>
+    {% endif %}    
+  </body>
+</html>

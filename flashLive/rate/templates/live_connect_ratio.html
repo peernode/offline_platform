@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Copatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直播Peer连接成功率</title>
+
+    <script src="../../static/jquery-1.11.1/jquery-1.11.1.min.js"></script>
+    <script src="../../static/Highcharts-4.0.4/js/highcharts.js"></script>
+    <script src="../../static/Highcharts-4.0.4/js/modules/exporting.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+    $(function () {
+      $('#container').highcharts({
+        chart: {
+          zoomType: 'xy'
+        },
+        title: {
+          text: '直播Peer连接成功率'
+        },
+        subtitle: {
+          text: 'From {{fdate}} To {{tdate}}'
+        },
+        xAxis: [{
+          categories: {{content.time|safe}} 
+        }],
+        yAxis: [{
+          labels: {
+            style: {
+              color: '#89A54E'
+            }
+          },
+          title: {
+            text: 'Records'
+          }
+        }, {
+          title: {
+            text: 'Ratio'
+          },
+          labels: {
+            style: {
+              color: '#4572A7'
+            }
+          },
+          opposite: true
+        }],
+        tooltip: {
+          shared: true  
+        },
+        plotOptions: {
+        },
+        legend: {
+          layout: 'vertical',
+          align: 'left',
+          x: 120,
+          verticalAlign: 'top',
+          y: 100,
+          floating: true
+        },
+        series: [{
+          name: '主动投递数',
+          type: 'column',
+          data: {{content.postrecords|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }, {
+          name: '首次主动投递数',
+          type: 'column',
+          data: {{content.fpostrecords|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }, {
+          name: '连接成功率',
+          type: 'spline',
+          yAxis: 1,
+          data: {{content.postratio|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }, {
+          name: '首次投递连接成功率',
+          type: 'spline',
+          yAxis: 1,
+          data: {{content.fpostratio|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }, {
+          name: '下线比率',
+          type: 'spline',
+          yAxis: 1,
+          data: {{content.failratio|safe}},
+          tooltip: {
+            valueSuffix: ''
+          }
+        }]
+      });
+    });    
+    </script>
+  </head>
+  <body>
+    {% if content %}
+      <div id="container" style="min-width:1000px;height:600px"></div>
+    {% else %}
+      <p>{{error}}</p>
+    {% endif %}    
+  </body>
+</html>

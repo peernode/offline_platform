@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>点播离线数据平台</title>
+    <link rel="stylesheet" href="/static/content/bootstrap.min.css">  
+</head>
+<body>
+    <div>
+        <ul>
+            <li> mp4meta
+                <ul>
+                    <li><a href="/mp4meta/fbuffer_records/" target="panel">首次缓冲记录数</a></li>
+                    <li><a href="/mp4meta/fbuffer_success/" target="panel">首次缓冲成功率</a></li>
+                    <li><a href="/mp4meta/mp4info/" target="panel">mp4压缩头信息</a></li>
+                </ul>                
+            </li>
+            <li> Peer连接成功率
+                <ul>
+                    <li><a href="/rate/conect_ratio/" target="panel">日常数据</a></li>
+                    <li><a href="/rate/connect_hour_ratio/" target="panel">当天24小时数据</a></li>
+                </ul>
+            </li>
+            <li> Peer可做种率
+                <ul>
+                    <li><a href="/rate/seed_ratio" target="panel">日常数据</a></li>
+                    <li><a href="/rate/seed_hour_ratio" target="panel">当天24小时数据</a></li>
+                </ul>
+            </li>
+            <li> playtm
+                <ul>
+                    <li><a href="/query/vod/playtm/date" target="panel">日常数据</a></li>
+                    <li><a href="/query/vod/playtm/hour" target="panel">当天24小时数据</a></li>
+                </ul>
+            </li>
+	        <li> fbuffer
+                <ul>
+                    <li><a href="/query/vod/fbuffer/date" target="panel">日常数据</a></li>
+                    <li><a href="/query/vod/fbuffer/hour" target="panel">当天24小时数据</a></li>
+                </ul>
+            </li>  
+                
+            <li> dbuffer   
+                <ul>
+                    <li>日常数据
+                        <ul>
+                            <li><a href="/dbuffer/all_dbuffer/" target="panel">整体数据</a></li>                        
+                            <li><a href="/dbuffer/movie_dbuffer/" target="panel">movie</a></li>
+                            <li><a href="/dbuffer/tv_dbuffer/" target="panel">tv</a></li>
+                            <li><a href="/dbuffer/cartoon_dbuffer/" target="panel">cartoon</a></li>
+                        </ul>   
+                    </li>
+                    <li>当天24小时数据
+                        <ul>
+                            <li><a href="/dbuffer/all_hour_dbuffer/" target="panel">整体数据</a></li>                        
+                            <li><a href="/dbuffer/movie_hour_dbuffer/" target="panel">movie</a></li>
+                            <li><a href="/dbuffer/tv_hour_dbuffer/" target="panel">tv</a></li>
+                            <li><a href="/dbuffer/cartoon_hour_dbuffer/" target="panel">cartoon</a></li>
+                        </ul>   
+                    </li>
+                </ul>   
+            </li> 
+        </ul>
+
+        <hr />
+        <ul>
+            <li>
+                <a href="http://192.168.16.33:8002" target="_blank" class="btn btn-primary  " > 直播数据平台</a>
+            </li>
+            <li>
+                <a href="http://192.168.16.33:8811" target="_blank" class="btn btn-primary  " > 移动数据平台</a>
+            </li>                         
+        </ul>
+    </div>
+</body>
+</html>

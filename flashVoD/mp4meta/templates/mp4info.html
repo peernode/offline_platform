@@ -1,0 +1,212 @@
+﻿{% extends "daily_base.html" %}
+
+{% block formHeadBlock %}
+{% include 'from_to.html' %}   
+{% endblock %}
+
+{% block styleBlock %}
+    <style>
+        fieldset {
+            border: 0;
+        }        
+        select {
+            width: 140px;
+        }
+       
+    </style>
+{% endblock %}    
+
+{% block highchartsblock %}
+   {% for item in info_ct %}
+    $("#info_ct_{{item.index}}").highcharts({
+            title: {
+	            text: '{{item.title}}',
+	            x: -20 //center
+	        },
+	        subtitle: {
+	            text: '{{item.subtitle}}',
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: [{{item.xAxis}}],
+                tickInterval:{{item.t_interval}},
+                labels:{
+                    rotation:45
+                }
+	        },
+	        yAxis: {
+	            title: {
+	                text: '获取压缩头信息耗时(ms) '
+	            },
+	            plotLines: [{
+	                value: 0,
+	                width: 1,
+	                color: '#808080'
+	            }],
+                min: 0
+	        },
+	        tooltip: {
+	            valueSuffix: '',
+                shared: true  
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: [{{item.series|safe}}]
+    });
+    {% endfor %}
+
+    {% for item in info_ratio %}
+    $('#info_ratio_{{item.index}}').highcharts({
+            title: {
+	            text: '{{item.title}}',
+	            x: -20 //center
+	        },
+	        subtitle: {
+	            text: '{{item.subtitle}}',
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: [{{item.xAxis|safe}}],
+                tickInterval:{{item.t_interval}},
+                labels:{
+                    rotation:45
+                }
+	        },
+	        yAxis: [{ // Primary yAxis
+                labels: {                   
+                    style: {
+                        color: '#89A54E'
+                    }
+                },
+                title: {
+                    text: 'records',
+                    style: {
+                        color: '#89A54E'
+                    }
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: 'ratio',
+                    style: {
+                        color: '#4572A7'
+                    }
+                },
+                labels: {
+                    //format: '{value} mm',
+                    style: {
+                        color: '#4572A7'
+                    }
+                },
+                min: 0,
+                max: 0.2,
+                opposite: true
+            }],
+	        tooltip: {
+	            valueSuffix: '',
+                shared: true  
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: [{{item.series|safe}}]
+    });
+    {% endfor %}
+
+{% for item in uncompress_ratio %}
+    $('#uncompress_ratio_{{item.index}}').highcharts({
+            title: {
+	            text: '{{item.title}}',
+	            x: -20 //center
+	        },
+	        subtitle: {
+	            text: '{{item.subtitle}}',
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: [{{item.xAxis|safe}}],
+                tickInterval:{{item.t_interval}},
+                labels:{
+                    rotation:45
+                }
+	        },
+	        yAxis: [{ // Primary yAxis
+                labels: {                   
+                    style: {
+                        color: '#89A54E'
+                    }
+                },
+                title: {
+                    text: 'records',
+                    style: {
+                        color: '#89A54E'
+                    }
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: 'ratio',
+                    style: {
+                        color: '#4572A7'
+                    }
+                },
+                labels: {
+                    //format: '{value} mm',
+                    style: {
+                        color: '#4572A7'
+                    }
+                },
+                min: 0,
+                max: 0.2,
+                opposite: true
+            }],
+	        tooltip: {
+	            valueSuffix: '',
+                shared: true  
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: [{{item.series|safe}}]
+    });
+    {% endfor %}
+{% endblock %}
+
+{% block formblock %} 
+    <form action="/mp4meta/mp4info" method="get">
+        {% include 'from_to2.html' %}  
+        <label for="version">版本：</label>
+        <select name="ver" id="version">
+            {% for item in vers %}
+                {% ifequal item select_item.sver %}
+                    <option value="{{item}}" selected="selected">{{item}}</option>
+                {% else %}
+                    <option value="{{item}}">{{item}}</option>
+                {% endifequal %}
+            {% endfor %}
+        </select>
+                
+        <input type="submit" value="Get" />
+    </form>
+{% endblock %}
+
+{% block tabsblock %}
+{% for item in info_ct %}
+<div id="info_ct_{{item.index}}" style="min-width:700px;height:400px" ></div>
+{% endfor %}
+{% for item in info_ratio %}
+<div id="info_ratio_{{item.index}}" style="min-width:700px;height:400px" ></div>
+{% endfor %}
+{% for item in uncompress_ratio %}
+<div id="uncompress_ratio_{{item.index}}" style="min-width:700px;height:400px" ></div>
+{% endfor %}
+
+{% endblock %}

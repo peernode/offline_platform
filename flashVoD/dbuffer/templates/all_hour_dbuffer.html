@@ -1,0 +1,134 @@
+﻿{% extends "current_day_base.html" %}
+
+{% block formHeadBlock %}
+{% include 'the_day.html' %}   
+
+{% endblock %}
+
+{% block styleBlock %}
+    <style>
+        fieldset {
+            border: 0;
+        }        
+        select {
+            width: 140px;
+        }
+       
+    </style>
+{% endblock %}    
+
+{% block highchartsblock %}
+   {% for item in contents_day %}
+    $('#day_{{item.index}}').highcharts({
+            title: {
+	            text: '{{item.title}}',
+	            x: -20 //center
+	        },
+	        subtitle: {
+	            text: '{{item.subtitle}}',
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: [{{item.xAxis|safe}}]
+	        },
+	        yAxis: [{ // Primary yAxis
+                labels: {                   
+                    style: {
+                        color: '#89A54E'
+                    }
+                },
+                title: {
+                    text: 'btm (s)',
+                    style: {
+                        color: '#89A54E'
+                    }
+                }
+            }],
+	        tooltip: {
+	            valueSuffix: '',
+                shared: true  
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: [{{item.series|safe}}]
+    });
+    {% endfor %}
+    {% for item in contents_24 %}
+    $('#hour24_{{item.index}}').highcharts({
+            title: {
+	            text: '{{item.title}}',
+	            x: -20 //center
+	        },
+	        subtitle: {
+	            text: '{{item.subtitle}}',
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: [{{item.xAxis}}]
+	        },
+	        yAxis: [{ // Primary yAxis
+                labels: {                   
+                    style: {
+                        color: '#89A54E'
+                    }
+                },
+                title: {
+                    text: 'records',
+                    style: {
+                        color: '#89A54E'
+                    }
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: 'btm (s)',
+                    style: {
+                        color: '#4572A7'
+                    }
+                },
+                labels: {
+                    //format: '{value} mm',
+                    style: {
+                        color: '#4572A7'
+                    }
+                },
+                min: 0,
+                opposite: true
+            }],
+	        tooltip: {
+	            valueSuffix: '',
+                shared: true  
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: [{{item.series|safe}}]
+    });
+    {% endfor %}
+{% endblock %}
+
+{% block formblock %} 
+    <form action="/dbuffer/{{select_item.vt}}_hour_dbuffer" method="get">
+        {% include 'the_day2.html' %}  
+
+        <input type="submit" value="Get" />
+    </form>
+{% endblock %}
+
+{% block tabsblock %}
+{% for item in contents_day %}
+<div id="day_{{item.index}}" style="min-width:700px;height:400px" >
+</div>
+{% endfor %}
+{% for item in contents_24 %}
+<div id="hour24_{{item.index}}" style="min-width:700px;height:400px" >
+</div>
+{% endfor %}
+
+{% endblock %}

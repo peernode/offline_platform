@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+	<script type="text/javascript" src="/static/scripts/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="/static/Highcharts-4.0.4/js/highcharts.js"></script> 
+	<script type="text/javascript" src="/static/Highcharts-4.0.4/js/modules/exporting.js"></script>
+    
+    <script>{% block js %}{% endblock %}</script>
+    
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <h1>My test draw</h1>
+    {% block content %}{% endblock %}
+    {% block footer %}
+    <hr>
+    <p>Thanks for visiting my site.</p>
+    {% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,116 @@
+﻿{% extends "daily_base.html" %}
+
+{% block formHeadBlock %}
+{% include 'from_to.html' %}   
+{% endblock %}
+
+{% block styleBlock %}
+    <style>
+        fieldset {
+            border: 0;
+        }        
+        select {
+            width: 140px;
+        }
+       
+    </style>
+{% endblock %}    
+
+{% block highchartsblock %}
+   {% for item in contents %}
+    $('#tabs_{{item.index}}').highcharts({
+            title: {
+	            text: '{{item.title}}',
+	            x: -20 //center
+	        },
+	        subtitle: {
+	            text: '{{item.subtitle}}',
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: [{{item.xAxis|safe}}],
+                tickInterval:{{item.t_interval}},
+                labels:{
+                    rotation:45
+                }
+	        },
+	        yAxis: [{ // Primary yAxis
+                labels: {                   
+                    style: {
+                        color: '#89A54E'
+                    }
+                },
+                title: {
+                    text: 'records',
+                    style: {
+                        color: '#89A54E'
+                    }
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: 'ratio',
+                    style: {
+                        color: '#4572A7'
+                    }
+                },
+                labels: {
+                    //format: '{value} mm',
+                    style: {
+                        color: '#4572A7'
+                    }
+                },
+                min: 0,
+                max: 1,
+                opposite: true
+            }],
+	        tooltip: {
+	            valueSuffix: '',
+                shared: true  
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: [{{item.series|safe}}]
+    });
+    {% endfor %}
+{% endblock %}
+
+{% block formblock %} 
+    <form action="/rate/conect_ratio" method="get">
+        {% include 'from_to2.html' %}  
+        <label for="version">版本：</label>
+        <select name="ver" id="version">
+            {% for item in vers %}
+                {% ifequal item select_item.sver %}
+                    <option value="{{item}}" selected="selected">{{item}}</option>
+                {% else %}
+                    <option value="{{item}}">{{item}}</option>
+                {% endifequal %}
+            {% endfor %}
+        </select>
+
+        <label for="cttype">连接类型：</label>
+        <select name="ctype" id="connect_type">
+            {% for item in connect_types %}
+                {% ifequal item select_item.ctype %}
+                    <option value="{{item}}" selected="selected">{{item}}</option>
+                {% else %}
+                    <option value="{{item}}">{{item}}</option>
+                {% endifequal %}
+            {% endfor %}
+        </select>
+
+        <input type="submit" value="Get" />
+    </form>
+{% endblock %}
+
+{% block tabsblock %}
+{% for item in contents %}
+<div id="tabs_{{item.index}}" style="min-width:700px;height:400px" >
+</div>
+{% endfor %}
+
+{% endblock %}

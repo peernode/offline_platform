@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>flashVoD</Name>
+    <RootNamespace>flashVoD</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{612fa17c-0ed5-4e51-a4fd-cf7cd3e38a46}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="dbuffer\dbuffer_daily_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dbuffer\dbuffer_hour_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dbuffer\models.py" />
+    <Compile Include="dbuffer\tests.py" />
+    <Compile Include="dbuffer\views.py" />
+    <Compile Include="dbuffer\__init__.py" />
+    <Compile Include="flashVoD\wsgi.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="flashVoD\__init__.py" />
+    <Compile Include="flashVoD\settings.py" />
+    <Compile Include="flashVoD\urls.py" />
+    <Compile Include="mp4meta\models.py" />
+    <Compile Include="mp4meta\mp4info_access_raito_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mp4meta\mp4info_ct_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mp4meta\tests.py" />
+    <Compile Include="mp4meta\uncompress_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mp4meta\views.py" />
+    <Compile Include="mp4meta\__init__.py" />
+    <Compile Include="playtm\models.py" />
+    <Compile Include="playtm\tests.py" />
+    <Compile Include="playtm\views.py" />
+    <Compile Include="playtm\__init__.py" />
+    <Compile Include="rate\models.py" />
+    <Compile Include="rate\tests.py" />
+    <Compile Include="rate\views.py" />
+    <Compile Include="rate\__init__.py" />
+    <Compile Include="vodBackend\admin.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\base_tables_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rate\connect_ratio_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\models.py" />
+    <Compile Include="rate\seed_ratio_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\tools\baseobj.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\tools\post_clarity_type_tool.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\tools\post_connect_type_tool.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\tools\post_ISP_info_tool.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\tools\post_location_info_tool.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\tools\post_tools.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\tools\post_version_tool.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\tools\post_video_type_tool.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vodBackend\tests.py" />
+    <Compile Include="vodBackend\views.py" />
+    <Compile Include="vodBackend\__init__.py" />
+    <Compile Include="vod\date_time_tool.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vod\models.py" />
+    <Compile Include="vod\tests.py" />
+    <Compile Include="vod\views.py" />
+    <Compile Include="vod\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dbuffer\" />
+    <Folder Include="dbuffer\templates\" />
+    <Folder Include="flashVoD\" />
+    <Folder Include="mp4meta\" />
+    <Folder Include="mp4meta\templates\" />
+    <Folder Include="playtm\" />
+    <Folder Include="playtm\templates\" />
+    <Folder Include="rate\" />
+    <Folder Include="rate\templates\" />
+    <Folder Include="vodBackend\" />
+    <Folder Include="vodBackend\tools\" />
+    <Folder Include="vodBackend\templates\" />
+    <Folder Include="vod\" />
+    <Folder Include="vod\static\" />
+    <Folder Include="vod\static\content\" />
+    <Folder Include="vod\static\fonts\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\3d-column-interactive\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\3d-column-null-values\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\3d-column-stacking-grouping\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\3d-pie-donut\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\3d-pie\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\3d-scatter-draggable\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\area-basic\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\area-inverted\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\area-missing\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\area-negative\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\area-stacked-percent\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\area-stacked\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\arearange-line\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\arearange\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\areaspline\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\bar-basic\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\bar-negative-stack\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\bar-stacked\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\box-plot\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\bubble-3d\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\bubble\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\column-basic\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\column-drilldown\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\column-negative\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\column-parsed\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\column-placement\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\column-rotated-labels\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\column-stacked-and-grouped\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\column-stacked-percent\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\column-stacked\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\columnrange\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\combo-dual-axes\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\combo-meteogram\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\combo-multi-axes\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\combo-regression\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\combo\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\dynamic-click-to-add\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\dynamic-master-detail\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\dynamic-update\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\error-bar\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\funnel\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\gauge-clock\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\gauge-dual\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\gauge-solid\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\gauge-speedometer\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\gauge-vu-meter\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\heatmap-canvas\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\heatmap\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\line-ajax\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\line-basic\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\line-labels\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\line-log-axis\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\line-time-series\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\pie-basic\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\pie-donut\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\pie-drilldown\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\pie-gradient\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\pie-legend\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\pie-monochrome\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\pie-semi-circle\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\polar-spider\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\polar-wind-rose\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\polar\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\pyramid\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\renderer\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\scatter\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\sparkline\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\spline-inverted\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\spline-irregular-time\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\spline-plot-bands\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\spline-symbols\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\examples\waterfall\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\util\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\converter\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\util\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\generated-sources\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\generated-sources\annotations\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\maven-archiver\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\surefire\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\controller\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\filter\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\interceptor\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\service\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\resources\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\META-INF\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\css\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\javascript\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\xml\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\controller\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\filter\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\interceptor\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\service\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\generated-sources\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\generated-sources\annotations\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\META-INF\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\css\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\javascript\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\xml\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\controller\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\filter\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\interceptor\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\service\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\pages\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\maven-archiver\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\surefire\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\WEB_002dINF\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\WEB_002dINF\pages\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\tmp\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\php\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\exporting-server\php\php-batik\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\gfx\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\graphics\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\js\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\js\adapters\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\js\modules\" />
+    <Folder Include="vod\static\Highcharts-4.0.4\js\themes\" />
+    <Folder Include="vod\static\jquery-ui-1.11.2\" />
+    <Folder Include="vod\static\jquery-ui-1.11.2\external\" />
+    <Folder Include="vod\static\jquery-ui-1.11.2\external\jquery\" />
+    <Folder Include="vod\static\jquery-ui-1.11.2\images\" />
+    <Folder Include="vod\static\scripts\" />
+    <Folder Include="vod\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbuffer\templates\all_dbuffer.html" />
+    <Content Include="dbuffer\templates\all_hour_dbuffer.html" />
+    <Content Include="dbuffer\templates\hour_dbuffer.html" />
+    <Content Include="dbuffer\templates\daily_dbuffer.html" />
+    <Content Include="mp4meta\templates\daily_base.html" />
+    <Content Include="mp4meta\templates\fbuffer_recordss.html" />
+    <Content Include="mp4meta\templates\fbuffer_records_by_mp4meta.html" />
+    <Content Include="mp4meta\templates\fbuffer_success_ratio.html" />
+    <Content Include="mp4meta\templates\from_to.html" />
+    <Content Include="mp4meta\templates\from_to2.html" />
+    <Content Include="mp4meta\templates\mp4info.html" />
+    <Content Include="mp4meta\templates\table_base.html" />
+    <Content Include="playtm\models.pyc" />
+    <Content Include="playtm\templates\base.html" />
+    <Content Include="playtm\templates\content.html" />
+    <Content Include="playtm\views.pyc" />
+    <Content Include="playtm\__init__.pyc" />
+    <Content Include="rate\templates\connect_hour_ratio.html" />
+    <Content Include="rate\templates\connect_ratio.html" />
+    <Content Include="rate\templates\current_day_base.html" />
+    <Content Include="rate\templates\seed_hour_ratio.html" />
+    <Content Include="rate\templates\seed_ratio.html" />
+    <Content Include="rate\templates\the_day.html" />
+    <Content Include="rate\templates\the_day2.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="vodBackend\templates\index.html" />
+    <Content Include="vod\static\content\bootstrap.css" />
+    <Content Include="vod\static\content\bootstrap.min.css" />
+    <Content Include="vod\static\content\site.css" />
+    <Content Include="vod\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="vod\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="vod\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="vod\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\3d-column-interactive\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\3d-column-null-values\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\3d-column-stacking-grouping\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\3d-pie-donut\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\3d-pie\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\3d-scatter-draggable\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\area-basic\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\area-inverted\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\area-missing\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\area-negative\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\area-stacked-percent\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\area-stacked\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\arearange-line\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\arearange\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\areaspline\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\bar-basic\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\bar-negative-stack\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\bar-stacked\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\box-plot\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\bubble-3d\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\bubble\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\column-basic\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\column-drilldown\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\column-negative\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\column-parsed\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\column-placement\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\column-rotated-labels\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\column-stacked-and-grouped\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\column-stacked-percent\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\column-stacked\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\columnrange\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\combo-dual-axes\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\combo-meteogram\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\combo-multi-axes\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\combo-regression\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\combo\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\dynamic-click-to-add\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\dynamic-master-detail\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\dynamic-update\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\error-bar\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\funnel\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\gauge-clock\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\gauge-dual\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\gauge-solid\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\gauge-speedometer\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\gauge-vu-meter\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\heatmap-canvas\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\heatmap\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\line-ajax\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\line-basic\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\line-labels\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\line-log-axis\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\line-time-series\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\pie-basic\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\pie-donut\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\pie-drilldown\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\pie-gradient\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\pie-legend\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\pie-monochrome\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\pie-semi-circle\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\polar-spider\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\polar-wind-rose\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\polar\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\pyramid\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\renderer\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\scatter\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\sparkline\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\spline-inverted\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\spline-irregular-time\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\spline-plot-bands\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\spline-symbols\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\examples\waterfall\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\pom.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\SVGConverter.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\SVGConverterException.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\AbstractPool.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\BlockingQueuePool.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ObjectFactory.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ObjectPool.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\PoolException.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ServerObjectFactory.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\Server.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\ServerState.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\TimeOut.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\util\MimeType.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\util\TempDir.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\app-convert.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\log4j.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\data.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\drilldown.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\funnel.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\heatmap.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-3d.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-convert.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-more.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\map.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\no-data-to-display.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\solid-gauge.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\spring-convert.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\app-convert.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\converter\SVGConverter.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\converter\SVGConverterException.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\AbstractPool%241.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\AbstractPool.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\BlockingQueuePool.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ObjectFactory.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ObjectPool.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\PoolException.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ServerObjectFactory%24PortStatus.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ServerObjectFactory.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\Server%241.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\Server.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\ServerState.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\TimeOut.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\util\MimeType.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\util\TempDir.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\log4j.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\data.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\drilldown.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\funnel.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\heatmap.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-3d.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-convert.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-more.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highstock.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\map.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\no-data-to-display.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\solid-gauge.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\spring-convert.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\highcharts-export-convert.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\target\maven-archiver\pom.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\pom.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\controller\ExportController.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\controller\ZeroRequestParameterException.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\filter\CorsFilter.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\interceptor\RequestInterceptor.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\service\MonitorService.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\resources\log4j.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\META-INF\context.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\css\demo.css" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\Highcharts-icon-160px.png" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\codemirror.css" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\codemirror.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\javascript\index.html" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\javascript\javascript.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\javascript\typescript.html" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\xml\index.html" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\xml\xml.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\closetag.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\dialog.css" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\dialog.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\foldcode.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\formatting.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\javascript-hint.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\loadmode.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\match-highlighter.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\multiplex.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\overlay.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\pig-hint.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\runmode-standalone.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\runmode.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\search.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\searchcursor.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\simple-hint.css" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\simple-hint.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\xml-hint.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\jquery-1.11.0.min.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\callback.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\config.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\lexl.svg" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\demo.jsp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\error.jsp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\app-convert.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\export-servlet.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\spring-context.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\web.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\controller\ExportController.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\controller\ZeroRequestParameterException.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\filter\CorsFilter.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\interceptor\RequestInterceptor.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\service\MonitorService.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\log4j.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web.war" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\META-INF\context.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\css\demo.css" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\Highcharts-icon-160px.png" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\codemirror.css" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\codemirror.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\javascript\index.html" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\javascript\javascript.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\javascript\typescript.html" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\xml\index.html" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\xml\xml.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\closetag.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\dialog.css" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\dialog.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\foldcode.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\formatting.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\javascript-hint.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\loadmode.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\match-highlighter.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\multiplex.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\overlay.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\pig-hint.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\runmode-standalone.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\runmode.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\search.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\searchcursor.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\simple-hint.css" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\simple-hint.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\xml-hint.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\jquery-1.11.0.min.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\controller\ExportController.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\controller\ZeroRequestParameterException.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\filter\CorsFilter.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\interceptor\RequestInterceptor.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\service\MonitorService.class" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\log4j.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\callback.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\config.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\lexl.svg" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\aopalliance-1.0.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\asm-3.3.1.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\cglib-2.2.2.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-codec-1.7.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-fileupload-1.2.2.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-io-1.3.2.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-lang-2.5.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-logging-1.1.1.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\gson-2.2.2.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\highcharts-export-convert-2.1.0.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\log4j-1.2.14.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-aop-3.2.0.RELEASE.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-beans-3.2.0.RELEASE.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-context-3.2.0.RELEASE.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-core-3.2.0.RELEASE.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-expression-3.2.0.RELEASE.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-web-3.2.0.RELEASE.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-webmvc-3.2.0.RELEASE.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\standard-1.1.2.jar" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\pages\demo.jsp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\pages\error.jsp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\app-convert.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\export-servlet.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\spring-context.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\web.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\maven-archiver\pom.properties" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\WEB_002dINF\pages\demo_jsp.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\WEB_002dINF\pages\error_jsp.java" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_4e4bf147_145d14e0e22__8000_00001931.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_776ee455_1453bb181b6__8000_00007880.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_776ee455_1453bb181b6__8000_00007883.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_776ee455_1453bb181b6__8000_00007886.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_776ee455_1453bb181b6__8000_00007889.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000014.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000017.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000020.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000023.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000026.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000029.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00003155.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00003206.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00005924.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00006239.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00007184.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00007754.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00008018.tmp" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\highcharts-export\pom.xml" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\java\readme.md" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\data.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\drilldown.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\funnel.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\heatmap.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\highcharts-3d.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\highcharts-convert.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\highcharts-more.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\highcharts.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\map.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\no-data-to-display.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\readme.md" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\phantomjs\solid-gauge.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\exporting-server\php\php-batik\index.php" />
+    <Content Include="vod\static\Highcharts-4.0.4\gfx\vml-radial-gradient.png" />
+    <Content Include="vod\static\Highcharts-4.0.4\graphics\meteogram-symbols-30px.png" />
+    <Content Include="vod\static\Highcharts-4.0.4\graphics\skies.jpg" />
+    <Content Include="vod\static\Highcharts-4.0.4\graphics\snow.png" />
+    <Content Include="vod\static\Highcharts-4.0.4\graphics\sun.png" />
+    <Content Include="vod\static\Highcharts-4.0.4\index.htm" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\adapters\standalone-framework.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\adapters\standalone-framework.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\highcharts-3d.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\highcharts-3d.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\highcharts-all.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\highcharts-more.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\highcharts-more.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\highcharts.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\highcharts.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\canvas-tools.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\canvas-tools.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\data.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\data.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\drilldown.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\drilldown.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\exporting.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\exporting.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\funnel.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\funnel.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\heatmap.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\heatmap.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\no-data-to-display.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\no-data-to-display.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\solid-gauge.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\modules\solid-gauge.src.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\themes\dark-blue.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\themes\dark-green.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\themes\dark-unica.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\themes\gray.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\themes\grid-light.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\themes\grid.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\themes\sand-signika.js" />
+    <Content Include="vod\static\Highcharts-4.0.4\js\themes\skies.js" />
+    <Content Include="vod\static\jquery-ui-1.11.2\external\jquery\jquery.js" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-icons_222222_256x240.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="vod\static\jquery-ui-1.11.2\index.html" />
+    <Content Include="vod\static\jquery-ui-1.11.2\jquery-ui.css" />
+    <Content Include="vod\static\jquery-ui-1.11.2\jquery-ui.js" />
+    <Content Include="vod\static\jquery-ui-1.11.2\jquery-ui.min.css" />
+    <Content Include="vod\static\jquery-ui-1.11.2\jquery-ui.min.js" />
+    <Content Include="vod\static\jquery-ui-1.11.2\jquery-ui.structure.css" />
+    <Content Include="vod\static\jquery-ui-1.11.2\jquery-ui.structure.min.css" />
+    <Content Include="vod\static\jquery-ui-1.11.2\jquery-ui.theme.css" />
+    <Content Include="vod\static\jquery-ui-1.11.2\jquery-ui.theme.min.css" />
+    <Content Include="vod\static\scripts\bootstrap.js" />
+    <Content Include="vod\static\scripts\bootstrap.min.js" />
+    <Content Include="vod\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="vod\static\scripts\jquery-1.10.2.js" />
+    <Content Include="vod\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="vod\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="vod\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="vod\static\scripts\jquery.validate.js" />
+    <Content Include="vod\static\scripts\jquery.validate.min.js" />
+    <Content Include="vod\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="vod\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="vod\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="vod\static\scripts\respond.js" />
+    <Content Include="vod\static\scripts\respond.min.js" />
+    <Content Include="vod\static\scripts\_references.js" />
+    <Content Include="vod\templates\vod_index.html" />
+    <Content Include="vod\templates\nav.html" />
+    <Content Include="vod\templates\panel.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.mht">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
